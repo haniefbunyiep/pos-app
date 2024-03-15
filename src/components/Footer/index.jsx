@@ -1,10 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="bg-alabaster flex h-[70px] items-center justify-center">
-      <span>
-        ©️2022 TOMORO COFFEE. All rights reserved. Contact us
-        hitomoro@tomoro-coffee.com
-      </span>
-    </footer>
+    <>
+      {/* Sm */}
+      <div className="md:hidden">
+        <footer className="flex h-[70px] flex-col items-center justify-center gap-1 bg-alabaster ">
+          <span className="flex items-center justify-center">
+            ©️2022 TOMORO COFFEE. All rights reserved.
+          </span>
+          <span className="flex items-center justify-center">
+            Contact us hitomoro@tomoro-coffee.com
+          </span>
+        </footer>
+      </div>
+    </>
   );
 }
