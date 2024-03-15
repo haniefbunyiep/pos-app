@@ -1,0 +1,227 @@
+{
+  "coffee": [
+    {
+      "id": 1,
+      "name": "[FS] Iced Classic Latte",
+      "image": "https://static.fore.coffee/product/Classic%20Latte%20Iced.jpg",
+      "price": 24000,
+      "description": "Racikan espresso khas Fore Coffee dan krim susu pilihan. 100% cita rasa kopi Indonesia."
+    },
+    {
+      "id": 2,
+      "name": "Nutty Oat Latte",
+      "image": "https://static.fore.coffee/product/Nutty%20Oat%20Latte%20Iced.jpg",
+      "price": 39000,
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut."
+    },
+    {
+      "id": 3,
+      "name": "Iced Classic Latte",
+      "image": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "price": 24000,
+      "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore."
+    },
+    {
+      "id": 4,
+      "name": "Iced Salted Caramel Mocha",
+      "image": "https://static.fore.coffee/product/saltedcarameliced173.jpg",
+      "price": 33000,
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel."
+    },
+    {
+      "id": 5,
+      "name": "Hot Salted Caramel Mocha",
+      "image": "https://static.fore.coffee/product/salted-caramel173.jpg",
+      "price": 33000,
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel."
+    },
+    {
+      "id": 6,
+      "name": "Hot Espresso",
+      "image": "https://static.fore.coffee/product/espresso173.jpg",
+      "price": 19000,
+      "description": "Ekstrak biji kopi Arabika murni tanpa campuran."
+    },
+    {
+      "id": 7,
+      "name": "Iced Cappuccino",
+      "image": "https://static.fore.coffee/product/cappuccinoiced173.jpg",
+      "price": 29000,
+      "description": "Paduan espresso dengan susu sapi pilihan dan foam tebal di atasnya."
+    },
+    {
+      "id": 8,
+      "name": "Hot Cappuccino",
+      "image": "https://static.fore.coffee/product/cappuccinohot173.jpg",
+      "price": 29000,
+      "description": "Espresso shots dengan susu hangat dan lapisan foam tebal di atasnya."
+    },
+    {
+      "id": 9,
+      "name": "Double Iced Shaken Latte",
+      "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+      "price": 33000,
+      "description": "Paduan klasik 2 shot espresso dengan susu dan krim."
+    },
+    {
+      "id": 10,
+      "name": "Iced Café Latte",
+      "image": "https://static.fore.coffee/product/cafelatteiced173.jpg",
+      "price": 29000,
+      "description": "Paduan espresso dengan susu sapi pilihan dan sedikit foam di atasnya."
+    },
+    {
+      "id": 11,
+      "name": "Hot Café Latte",
+      "image": "https://static.fore.coffee/product/cafelatte173.jpg",
+      "price": 29000,
+      "description": "Paduan espresso dengan susu sapi pilihan dan sedikit foam di atasnya."
+    },
+    {
+      "id": 12,
+      "name": "Iced Americano",
+      "image": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "price": 21000,
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya."
+    },
+    {
+      "id": 13,
+      "name": "Hot Americano",
+      "image": "https://static.fore.coffee/product/americanohot173.jpg",
+      "price": 21000,
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya."
+    }
+  ],
+  "coffee-otd": [
+    {
+      "id": 1,
+      "name": "Iced Bali Kintamani",
+      "image": "https://static.fore.coffee/product/ICED%20COD.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan notes fruity dan citrus."
+    },
+    {
+      "id": 2,
+      "name": "Iced Toraja Sapan",
+      "image": "https://static.fore.coffee/product/ICED%20COD.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan notes citrus, rempah, dan molases."
+    },
+    {
+      "id": 3,
+      "name": "Iced Aceh gayo",
+      "image": "https://static.fore.coffee/product/ICED%20COD.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan taste notes coklat, butterscotch, dan rempah."
+    },
+    {
+      "id": 4,
+      "name": "Hot Aceh gayo",
+      "image": "https://static.fore.coffee/product/COD_satuan-01.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan taste notes coklat, butterscotch, dan rempah."
+    },
+    {
+      "id": 5,
+      "name": "Hot Toraja Span",
+      "image": "https://static.fore.coffee/product/COD_satuan-02.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan notes fruity dan citrus."
+    },
+    {
+      "id": 6,
+      "name": "Hot Bali Kintamani",
+      "image": "https://static.fore.coffee/product/COD_satuan-03.jpg",
+      "price": 21000,
+      "description": "Kopi aromatik dengan notes fruity dan citrus."
+    }
+  ],
+  "food": [
+    {
+      "id": 1,
+      "name": "Tuna Mayo Sandwich",
+      "image": "https://static.fore.coffee/product/Tuna%20Mayo.jpg",
+      "price": 39000,
+      "description": "Sandwich dengan mayonaise, butiran blackpepper, cheddar cheese, dan tuna fillet."
+    },
+    {
+      "id": 2,
+      "name": "Chicken Curry Sandwich",
+      "image": "https://static.fore.coffee/product/Chicken%20curry.jpg",
+      "price": 39000,
+      "description": "Sandwich dengan suwiran ayam, cheddar cheese, dan pasta kari yang creamy."
+    },
+    {
+      "id": 3,
+      "name": "Asian Beef Black Pepper Sandwich",
+      "image": "https://static.fore.coffee/product/beef%20bpp.jpg",
+      "price": 39000,
+      "description": "Sandwich dengan potongan daging, saus black pepper, cheddar cheese, dan sauteed onion."
+    },
+    {
+      "id": 4,
+      "name": "Smoked Beef & Cheese Croissant",
+      "image": "https://static.fore.coffee/product/Smoked%20Beef%20_%20Cheese%20Croissant.jpg",
+      "price": 36000,
+      "description": "Danish dengan isian smoked beef dan keju cheddar."
+    },
+    {
+      "id": 5,
+      "name": "Triple Cheese Danish",
+      "image": "https://static.fore.coffee/product/Triple%20Cheese%20Danish.jpg",
+      "price": 33000,
+      "description": "Danish dengan isian krim keju."
+    },
+    {
+      "id": 6,
+      "name": "Almond Croissant",
+      "image": "https://static.fore.coffee/product/Almond%20Croissant%20-1.jpg",
+      "price": 33000,
+      "description": "Croissant dengan taburan gula halus dan potongan almond."
+    },
+    {
+      "id": 7,
+      "name": "Blueberry Muffin",
+      "image": "https://static.fore.coffee/product/Blueberry%20Muffin--1.jpg",
+      "price": 33000,
+      "description": "Bolu padat rasa vanilla dengan isian blueberry jam."
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Muffin",
+      "image": "https://static.fore.coffee/product/Chocolate%20Muffin%20-%201.jpg",
+      "price": 33000,
+      "description": "Bolu padat rasa coklat dengan isian potongan coklat."
+    }
+  ],
+  "limited": [
+    {
+      "id": 1,
+      "name": "Iced Coco Peach Fusion Ice Blended",
+      "image": "https://static.fore.coffee/product/Coco%20Peach%20Fusion%20Ice%20Blended.jpg",
+      "price": 33000,
+      "description": "Ice blended yang menyegarkan dari peach, lychee, orange citrus, dan air kelapa."
+    },
+    {
+      "id": 2,
+      "name": "[FS] Iced Coco Peach Fusion Ice Blended",
+      "image": "https://static.fore.coffee/product/Coco%20Peach%20Fusion%20Ice%20Blended.jpg",
+      "price": 33000,
+      "description": "Ice blended yang menyegarkan dari peach, lychee, orange citrus, dan air kelapa."
+    },
+    {
+      "id": 3,
+      "name": "[FS] Iced Coco Peach Fusion",
+      "image": "https://static.fore.coffee/product/Coco%20Peach%20Fusion.jpg",
+      "price": 27000,
+      "description": "Rasa segar dari peach, lychee, orange citrus, dan air kelapa."
+    },
+    {
+      "id": 4,
+      "name": "Iced Coco Peach Fusion",
+      "image": "https://static.fore.coffee/product/Coco%20Peach%20Fusion.jpg",
+      "price": 27000,
+      "description": "Rasa segar dari peach, lychee, orange citrus, dan air kelapa."
+    }
+  ]
+}
