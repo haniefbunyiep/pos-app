@@ -22,7 +22,7 @@ export default function Navbar() {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu relative min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
+                <ul className="text-shuttlegray menu relative min-h-full w-80 bg-base-200 p-4 font-bold">
                   <li className="pt-10">
                     <Link href="/">Home</Link>
                   </li>
@@ -79,22 +79,34 @@ export default function Navbar() {
           <div className="flex h-[80%] w-[40%] items-center justify-center text-nowrap">
             <ul className=" flex gap-9 text-lg">
               <li>
-                <Link href="/" className="hover:text-burnorange">
+                <Link
+                  href="/"
+                  className="text-shuttlegray hover:text-burnorange"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/aboutus" className="hover:text-burnorange">
+                <Link
+                  href="/aboutus"
+                  className="text-shuttlegray hover:text-burnorange"
+                >
                   About us
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-burnorange">
+                <Link
+                  href="/products"
+                  className="text-shuttlegray hover:text-burnorange"
+                >
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/teams" className="hover:text-burnorange">
+                <Link
+                  href="/teams"
+                  className="text-shuttlegray hover:text-burnorange"
+                >
                   Our Teams
                 </Link>
               </li>
@@ -102,7 +114,7 @@ export default function Navbar() {
           </div>
           {/* Navbar Button */}
           <div className="flex h-[80%] w-[30%] items-center justify-center">
-            <span className="boder-2 flex h-[80%] w-auto items-center rounded-full border border-black px-2 text-lg hover:border-burnorange hover:text-burnorange">
+            <span className="boder-2 text-shuttlegray border-shuttlegray flex h-[80%] w-auto items-center rounded-full border px-2 text-lg hover:border-burnorange hover:text-burnorange">
               Download App
             </span>
           </div>

@@ -13,6 +13,8 @@ export default {
         burnorange: "#FF6A39",
         concrete: "#F3F3F3",
         alabaster: "#F8F8F8",
+        mineshaft: "#222222",
+        shuttlegray: "#595F69",
       },
     },
     screens: {

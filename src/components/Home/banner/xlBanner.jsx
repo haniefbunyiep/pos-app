@@ -10,7 +10,7 @@ export default function XlBanner() {
         />
         {/* Text */}
         <div className="absolute lg:left-20">
-          <div className="relative flex flex-col text-center lg:text-left">
+          <div className="text-shuttlegray relative flex flex-col text-center lg:text-left">
             <div className="absolute -mt-[1000px]"></div>
             <h3 className="text-3xl font-bold"> HEY !</h3>
             <h3 className="mb-[40px] text-3xl font-bold">
