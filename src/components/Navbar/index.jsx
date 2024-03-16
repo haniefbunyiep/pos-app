@@ -3,9 +3,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   return (
-    <>
-      {/* mobile */}
-      <div className="sm:hidden md:hidden lg:hidden">
+    <nav>
+      {/* Tablet and below */}
+      <div className="lg:hidden">
         <div className="relative flex h-[60px] items-center justify-center border-b-2 border-dashed border-concrete bg-white">
           <div className="absolute left-10 z-50 flex">
             <div className="drawer">
@@ -53,106 +53,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {/* sm */}
-      <div className="mobile:hidden md:hidden lg:hidden xl:hidden">
-        <div className="relative flex h-[60px] items-center justify-center border-b-2 border-dashed border-concrete bg-white">
-          <div className="absolute left-10 z-50 flex">
-            <div className="drawer">
-              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-content">
-                <label htmlFor="my-drawer" className="drawer-button">
-                  <RxHamburgerMenu size={25} />
-                </label>
-              </div>
-              <div className="drawer-side">
-                <label
-                  htmlFor="my-drawer"
-                  aria-label="close sidebar"
-                  className="drawer-overlay"
-                ></label>
-                <ul className="menu min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
-                  <li>
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link href="/aboutus">About Us</Link>
-                  </li>
-                  <li>
-                    <a>Product</a>
-                  </li>
-                  <li>
-                    <a>Our Teams</a>
-                  </li>
-                  <li>
-                    <a>Download Now</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* Navbar Logo */}
-          <div className="absolute flex h-[80%] w-[30%] items-center justify-center">
-            <Link href="/">
-              <img
-                src="https://www.tomoro-coffee.com/img/icon7.2a9d4c28.png"
-                alt=""
-                className="h-10 w-auto"
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-      {/* md */}
-      <div className="mobile:hidden sm:hidden md:block lg:hidden xl:hidden">
-        <div className="relative flex h-[60px] items-center justify-center border-b-2 border-dashed border-concrete bg-white">
-          <div className="absolute left-10 z-50 flex">
-            <div className="drawer">
-              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-content">
-                <label htmlFor="my-drawer" className="drawer-button">
-                  <RxHamburgerMenu size={25} />
-                </label>
-              </div>
-              <div className="drawer-side">
-                <label
-                  htmlFor="my-drawer"
-                  aria-label="close sidebar"
-                  className="drawer-overlay"
-                ></label>
-                <ul className="menu min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
-                  <li>
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link href="/aboutus">About Us</Link>
-                  </li>
-                  <li>
-                    <a>Product</a>
-                  </li>
-                  <li>
-                    <a>Our Teams</a>
-                  </li>
-                  <li>
-                    <a>Download Now</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* Navbar Logo */}
-          <div className="absolute flex h-[80%] w-[30%] items-center justify-center">
-            <Link href="/">
-              <img
-                src="https://www.tomoro-coffee.com/img/icon7.2a9d4c28.png"
-                alt=""
-                className="h-10 w-auto"
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-      {/* lg */}
-      <div className="mobile:hidden sm:hidden md:hidden lg:block">
+      {/* Laptop and above */}
+      <div className="hidden lg:block">
         <div className="flex h-[60px] items-center justify-between border-b-2 border-dashed border-concrete bg-white">
           {/* Navbar Logo */}
           <div className="flex h-[80%] w-[30%] items-center justify-center">
@@ -168,7 +70,9 @@ export default function Navbar() {
           <div className="flex h-[80%] w-[40%] items-center justify-center text-nowrap">
             <ul className=" flex gap-9 text-lg">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" className="hover:text-burnorange">
+                  Home
+                </Link>
               </li>
               <li>
                 <Link href="/aboutus" className="hover:text-burnorange">
@@ -190,6 +94,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
