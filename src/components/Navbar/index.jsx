@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { MdClose } from "react-icons/md";
 
 export default function Navbar() {
   return (
@@ -21,7 +22,7 @@ export default function Navbar() {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
+                <ul className="menu relative min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
                   <li>
                     <Link href="/">Home</Link>
                   </li>
@@ -37,6 +38,14 @@ export default function Navbar() {
                   <li>
                     <a>Download Now</a>
                   </li>
+
+                  {/* Close button */}
+                  <input id="my-drawer" type="checkbox" className="hidden" />
+                  <div className="absolute right-5">
+                    <label htmlFor="my-drawer">
+                      <MdClose size={25} className="text-black" />
+                    </label>
+                  </div>
                 </ul>
               </div>
             </div>
