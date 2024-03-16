@@ -56,7 +56,7 @@ export default function Navbar() {
               <img
                 src="https://www.tomoro-coffee.com/img/icon7.2a9d4c28.png"
                 alt=""
-                className="h-10 w-auto"
+                className="h-9 w-auto"
               />
             </Link>
           </div>
