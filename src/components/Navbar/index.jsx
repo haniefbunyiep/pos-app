@@ -23,17 +23,17 @@ export default function Navbar() {
                   className="drawer-overlay"
                 ></label>
                 <ul className="menu relative min-h-full w-80 bg-base-200 p-4 font-bold text-burnorange">
-                  <li>
+                  <li className="pt-10">
                     <Link href="/">Home</Link>
                   </li>
                   <li>
                     <Link href="/aboutus">About Us</Link>
                   </li>
                   <li>
-                    <a>Product</a>
+                    <Link href="/products">Product</Link>
                   </li>
                   <li>
-                    <a>Our Teams</a>
+                    <Link href="/teams">Our Teams</Link>
                   </li>
                   <li>
                     <a>Download Now</a>
@@ -89,13 +89,18 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <a className="hover:text-burnorange">Products</a>
+                <Link href="/products" className="hover:text-burnorange">
+                  Products
+                </Link>
               </li>
               <li>
-                <a className="hover:text-burnorange">Our Teams</a>
+                <Link href="/teams" className="hover:text-burnorange">
+                  Our Teams
+                </Link>
               </li>
             </ul>
           </div>
+          {/* Navbar Button */}
           <div className="flex h-[80%] w-[30%] items-center justify-center">
             <span className="boder-2 flex h-[80%] w-auto items-center rounded-full border border-black px-2 text-lg hover:border-burnorange hover:text-burnorange">
               Download App
