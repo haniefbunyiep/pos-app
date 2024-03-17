@@ -1,6 +1,5 @@
-import XxlBanner from "~/components/Home/banner/2xlBanner";
-import XlBanner from "~/components/Home/banner/xlBanner";
+import Banner from "~/components/Home/Banner/Banner";
 
 export default function HomePage() {
-  return <XlBanner />;
+  return <Banner />;
 }

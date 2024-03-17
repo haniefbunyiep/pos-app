@@ -23,19 +23,25 @@ export default function Navbar() {
                   className="drawer-overlay"
                 ></label>
                 <ul className="text-shuttlegray menu relative min-h-full w-80 bg-base-200 p-4 font-bold">
-                  <li className="pt-10">
+                  <li className="pt-10 hover:text-burnorange">
                     <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="/aboutus">About Us</Link>
+                    <Link className="hover:text-burnorange" href="/aboutus">
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/products">Product</Link>
+                    <Link className="hover:text-burnorange" href="/products">
+                      Product
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/teams">Our Teams</Link>
+                    <Link className="hover:text-burnorange" href="/teams">
+                      Our Teams
+                    </Link>
                   </li>
-                  <li>
+                  <li className="hover:text-burnorange">
                     <a>Download Now</a>
                   </li>
 

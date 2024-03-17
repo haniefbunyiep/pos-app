@@ -18,8 +18,10 @@ export default function RootLayout({ children }) {
           <div className="sticky top-0 z-50">
             <Navbar />
           </div>
-          <div className="mt-0 lg:px-10">{children}</div>
-          <div>
+          <div className="flex items-center justify-center px-5 lg:px-10">
+            {children}
+          </div>
+          <div className="fixed bottom-0 w-full">
             <Footer />
           </div>
         </div>
