@@ -8,13 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        fungreen: "#036041",
+        java: "#2BB6B3",
+        fountainblue: "#50BFBD",
+        deyork: "#7FC694",
         pampas: "#F4F2EF",
-        burnorange: "#FF6A39",
-        concrete: "#F3F3F3",
-        alabaster: "#F8F8F8",
-        mineshaft: "#222222",
-        shuttlegray: "#595F69",
       },
     },
     screens: {

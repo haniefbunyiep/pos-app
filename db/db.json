@@ -1,4 +1,32 @@
 {
+  "roles": [
+    {
+      "id": 1,
+      "name": "superAdmin"
+    },
+    {
+      "id": 2,
+      "name": "admin"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "roleId": 1,
+      "name": "super-admin-01",
+      "email": "super.admin.01@example.com",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "roleId": 2,
+      "name": "admin-01",
+      "email": "super.admin.02@example.com",
+      "username": "admin2",
+      "password": "admin2"
+    }
+  ],
   "coffee": [
     {
       "id": 1,
