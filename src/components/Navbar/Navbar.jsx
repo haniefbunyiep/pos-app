@@ -12,20 +12,23 @@ import {
 import { toast } from "react-toastify";
 import { UserContext } from "~/support/context/userContext";
 import { useContext, useEffect } from "react";
-import axios from "axios";
+import { axiosInstance } from "~/lib/axios";
+import { useZustandStores } from "~/zustandStores";
 
 export default function Navbar() {
   const { setUserData } = useContext(UserContext);
+
+  const { users, createUsers } = useZustandStores();
 
   const handleKeepLogin = async () => {
     try {
       let userLocalStorage = localStorage.getItem("userLocalStorage");
       userLocalStorage = JSON.parse(userLocalStorage);
 
-      const keepLogin = await axios.get(
-        `http://localhost:8000/users/${userLocalStorage.id}`,
+      const keepLogin = await axiosInstance.get(
+        `/users/${userLocalStorage.id}`,
       );
-      setUserData({
+      createUsers({
         id: keepLogin.data.id,
         username: keepLogin.data.username,
         role: keepLogin.data.roleId,
@@ -42,7 +45,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <nav>
-      <div className="relative flex h-[60px] items-center justify-center border-b-2 border-dashed border-concrete bg-pampas">
+      <div className="border-concrete relative flex h-[60px] items-center justify-center border-b-2 border-dashed bg-pampas">
         <div className="absolute left-10 z-50 flex">
           {pathname !== "/" ? (
             <div className="drawer">
@@ -58,8 +61,8 @@ export default function Navbar() {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <ul className="menu relative min-h-full w-80 bg-base-200 p-4 font-bold text-shuttlegray">
-                  <li className="hover:text-java flex pt-10">
+                <ul className="text-shuttlegray menu relative min-h-full w-80 bg-base-200 p-4 font-bold">
+                  <li className="flex pt-10 hover:text-java">
                     <Link href="/">
                       {" "}
                       <label htmlFor="">

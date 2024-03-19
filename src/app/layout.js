@@ -6,6 +6,7 @@ import { useState } from "react";
 import { UserContext } from "~/support/context/userContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TanstackProvider from "~/providers/tanstackProvider";
 
 // import Footer from "~/components/Footer";
 
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="flex h-max items-center justify-center bg-pampas lg:px-20">
               <ToastContainer />
-              {children}
+              <TanstackProvider>{children}</TanstackProvider>
             </div>
             {/* <div className="bottom-0 w-[100%]">
             <Footer />

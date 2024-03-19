@@ -1,69 +1,100 @@
 "use client";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { loginSchema } from "~/support/schema/loginSchema";
-import { UserContext } from "~/support/context/userContext";
-import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import { axiosInstance } from "~/lib/axios";
+import { useAuthMutation } from "~/api/useAuthMutation";
+import { useZustandStores } from "~/zustandStores";
 
 export default function HomePage() {
-  const { userData, setUserData } = useContext(UserContext);
   const redirect = useRouter();
 
-  let findEmail;
-
-  const handleLogin = async (values, resetForm) => {
-    let findEmail;
-    try {
-      if (values.emailOrUsername.includes("@")) {
-        findEmail = await axiosInstance.get(
-          `/users?email=${values.emailOrUsername}`,
-        );
-      } else {
-        findEmail = await axiosInstance.get(
-          `/users?username=${values.emailOrUsername}`,
-        );
-      }
-      console.log(findEmail.data[0].roleId);
-      console.log(findEmail.data);
-      if (
-        !findEmail.data.length > 0 ||
-        findEmail.data[0].password !== values.password
-      ) {
-        toast.error("Email not found or password incorrect");
-        return;
-      }
-      setUserData({
-        id: findEmail.data[0].id,
-        username: findEmail.data[0].username,
-        role: findEmail.data[0].roleId,
-      });
-      localStorage.setItem(
-        "userLocalStorage",
-        JSON.stringify({
-          id: findEmail.data[0].id,
-          username: findEmail.data[0].username,
-          role: findEmail.data[0].roleId,
-        }),
-      );
-      resetForm();
-      toast.success("Login success");
-      if (findEmail.data[0].roleId === 1) {
-        redirect.push("/super-admin-dashboard");
-      } else if (findEmail.data[0].roleId === 2) {
-        redirect.push("/admin-dashboard");
-      }
-    } catch (error) {
-      toast.error(
-        error.message ? error.message : "Login Failed Please Try Again!",
-      );
+  const { users, createUsers } = useZustandStores();
+  const handleAuthMutationSucces = (data) => {
+    createUsers({
+      id: data[0].id,
+      username: data[0].username,
+      role: data[0].roleId,
+    });
+    localStorage.setItem(
+      "userLocalStorage",
+      JSON.stringify({
+        id: data[0].id,
+        username: data[0].username,
+        role: data[0].roleId,
+      }),
+    );
+    if (data[0].roleId === 1) {
+      redirect.push("/super-admin-dashboard");
+    } else if (data[0].roleId === 2) {
+      redirect.push("/admin-dashboard");
     }
+    alert("Login Succes");
   };
 
-  useEffect(() => {
-    console.log(userData);
+  const handleAuthMutationError = (err) => {
+    alert(err.message);
+  };
+
+  const { mutate, status } = useAuthMutation({
+    onSuccess: handleAuthMutationSucces,
+    onError: handleAuthMutationError,
   });
+
+  // let findEmail;
+
+  // const handleLogin = async (values, resetForm) => {
+  //   let findEmail;
+  //   try {
+  //     if (values.emailOrUsername.includes("@")) {
+  //       findEmail = await axiosInstance.get(
+  //         `/users?email=${values.emailOrUsername}`,
+  //       );
+  //     } else {
+  //       findEmail = await axiosInstance.get(
+  //         `/users?username=${values.emailOrUsername}`,
+  //       );
+  //     }
+  //     console.log(findEmail.data[0].roleId);
+  //     console.log(findEmail.data);
+  //     if (
+  //       !findEmail.data.length > 0 ||
+  //       findEmail.data[0].password !== values.password
+  //     ) {
+  //       toast.error("Email not found or password incorrect");
+  //       return;
+  //     }
+  //     setUserData({
+  //       id: findEmail.data[0].id,
+  //       username: findEmail.data[0].username,
+  //       role: findEmail.data[0].roleId,
+  //     });
+  //     localStorage.setItem(
+  //       "userLocalStorage",
+  //       JSON.stringify({
+  //         id: findEmail.data[0].id,
+  //         username: findEmail.data[0].username,
+  //         role: findEmail.data[0].roleId,
+  //       }),
+  //     );
+  //     resetForm();
+  //     toast.success("Login success");
+  //     if (findEmail.data[0].roleId === 1) {
+  //       redirect.push("/super-admin-dashboard");
+  //     } else if (findEmail.data[0].roleId === 2) {
+  //       redirect.push("/admin-dashboard");
+  //     }
+  //   } catch (error) {
+  //     toast.error(
+  //       error.message ? error.message : "Login Failed Please Try Again!",
+  //     );
+  //   }
+  // };
+
+  useEffect(() => {
+    // console.log(userData);
+    // console.log(users);
+  }, []);
 
   return (
     <Formik
@@ -73,7 +104,11 @@ export default function HomePage() {
       }}
       validationSchema={loginSchema}
       onSubmit={(values, { resetForm }) => {
-        handleLogin(values, resetForm);
+        const { emailOrUsername, password } = values;
+        mutate({ emailOrUsername, password });
+        {
+          users ? resetForm() : values;
+        }
       }}
     >
       {({ dirty, isValid }) => {
@@ -140,7 +175,7 @@ export default function HomePage() {
                 <button
                   type="submit"
                   className="btn w-[240px] bg-deyork text-pampas hover:border-deyork hover:bg-pampas hover:text-deyork"
-                  disabled={!(dirty && isValid)}
+                  disabled={!(dirty && isValid) || status === "pending"}
                 >
                   Log in
                 </button>
